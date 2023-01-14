@@ -3,12 +3,18 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 import Svg, {  Defs, ClipPath, Image, Path, Mask, G, Use } from "react-native-svg";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-import AuthNavigator from './navigations/AuthNavigator';
+import ButtonGradient from '../ButtonGradient';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+export default function LoginScreen( props ) {
+
+    const { navigation } = props;
+
+  const forgotPassword = () => {
+    console.log('si');
+    window.location.href = '';
+  }
 
   function SvgTop() {
     return (
@@ -196,11 +202,67 @@ export default function App() {
     )
   }
   return (
-    <NavigationContainer>
-      <AuthNavigator />
-    </NavigationContainer>
+    <View style={styles.mainContainer}>
+        <View style={styles.container}>
+            <View style={styles.containerSVG}>
+            <SvgTop />
+            </View>
+            <Text style={styles.title}>Hello guy</Text>
+            <Text style={styles.subTitle}>Sign In to your account</Text>
+            <TextInput 
+            style={styles.textInput}
+            placeholder="fredy@gmail.com"
+            />
+            <TextInput 
+            style={styles.textInput}
+            placeholder="password"
+            secureTextEntry={ true }
+            />
+            <Text style={styles.forgotPassword} onPress={() => navigation.navigate("Forgot Password", {
+                userId: 'ID0123456'
+            })}>Forgot your password</Text>
+            <ButtonGradient navigation={ navigation } />
+            <Text style={styles.forgotPassword} onPress={() => navigation.navigate("Register")}>Dont have account</Text>
+            <StatusBar style="auto" />
+        </View>
+    </View> 
   );
 }
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    backgroundColor: '#f1f1f1',
+    flex: 1
+  },
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  containerSVG: {
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  },
+  title: {
+    fontSize: 50,
+    color: '#34434D',
+    fontWeight: 'bold'
+  },
+  subTitle: {
+    fontSize: 20,
+    color: 'gray'
+  },
+  textInput: {
+    padding: 10,
+    paddingStart: 30,
+    width: '80%',
+    height: 50,
+    marginTop: 20,
+    borderRadius: 30,
+    backgroundColor: '#fff'
+  },
+  forgotPassword:{
+    fontSize: 14,
+    color: 'gray',
+    marginTop: 15,
+  }
 });
