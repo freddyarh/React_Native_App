@@ -5,8 +5,6 @@ import { ThrottleDevice, ChangeSSID, UpdateFirmware, TroubleshootConnection } fr
 import { routes, colors } from '../helpers/constants';
 import BottomTabNavigator from './BottomTabNavigator';
 import { DrawerContent } from './DrawerContent';
-import Map from '../components/screens/ManageDevice/Map';
-import Permissions from '../components/screens/ManageDevice/Permissions';
 
 const Drawer = createDrawerNavigator();
 
@@ -84,28 +82,6 @@ function DrawerNavigator() {
         component={ Billing }
         options={{
           title: routes.BILL,
-          headerTintColor: colors.white,
-          headerStyle: {
-              backgroundColor: colors.zetifiBlue
-          },
-        }}
-        />
-      <Drawer.Screen 
-        name={ 'Map' } 
-        component={ Map }
-        options={{
-          title: 'Map',
-          headerTintColor: colors.white,
-          headerStyle: {
-              backgroundColor: colors.zetifiBlue
-          },
-        }}
-        />
-      <Drawer.Screen 
-        name={ 'Permissions' } 
-        component={ Permissions }
-        options={{
-          title: 'Permissions',
           headerTintColor: colors.white,
           headerStyle: {
               backgroundColor: colors.zetifiBlue

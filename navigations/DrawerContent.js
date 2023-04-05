@@ -130,30 +130,6 @@ export function DrawerContent(props) {
                             onPress={() => {props.navigation.navigate('Billing')}}
                             labelStyle={ styles.listItem }
                         />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="card" 
-                                color={ colors.zetifiBlue }
-                                size={size}
-                                />
-                            )}
-                            label="Map"
-                            onPress={() => {props.navigation.navigate('Map')}}
-                            labelStyle={ styles.listItem }
-                        />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="card" 
-                                color={ colors.zetifiBlue }
-                                size={size}
-                                />
-                            )}
-                            label="Permissions"
-                            onPress={() => {props.navigation.navigate('Permissions')}}
-                            labelStyle={ styles.listItem }
-                        />
                     </Drawer.Section>
                 </View>
             </DrawerContentScrollView>

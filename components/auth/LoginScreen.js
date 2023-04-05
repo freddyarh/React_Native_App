@@ -58,6 +58,12 @@ const { height } = useWindowDimensions();
           /> 
         </View>
         <Text style={styles.subTitle}>Sign in to your account</Text>
+        {/* <TextInput
+          style={{ width: '100%'}}
+          label="Password"
+          secureTextEntry={eyeButton}
+          right={<TextInput.Icon icon="eye" onPress={ iconEye }/>}
+        /> */}
         <CustomInput 
           label={ "Email" }
           value={ email }

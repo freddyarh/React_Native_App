@@ -16,7 +16,7 @@ export const DeviceRegistration = () => {
       </View>
       <Text style={{ marginTop: 20, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>Device Serial / Number</Text>
       <CustomInput 
-        placeholder={ "Device Serial / Number" }
+        label={ "Device Serial / Number" }
         value={ numberDevice }
         setValue={ setNumberDevice }
       />
