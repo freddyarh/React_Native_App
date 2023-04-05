@@ -1,43 +1,42 @@
-import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { routes } from '../helpers/constants'
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity} from 'react-native';
+import { colors } from '../helpers/constants';
 
-export default function ButtonGradient ({ navigation }) {
+export default function ButtonGradient ({ label, buttonEvent, disabled }) {
 
-  const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
-    return (
-        <TouchableOpacity 
-          style={styles.container}
-          onPress={ () => navigation.navigate( routes.HOME ) }
-        >
-          <LinearGradient
-            // Button Linear Gradient
-            colors={['#4c669f', '#3b5998', '#192f6a']}
-            style={styles.button}
-            >
-            <Text style={styles.text}>SIGN IN {count}</Text>
-          </LinearGradient>
-        </TouchableOpacity>
-      );
+  return (
+      <TouchableOpacity 
+        style={ disabled ? styles.buttonDisable : styles.button }
+        onPress={ buttonEvent }
+        disabled={ disabled }
+      >
+        <Text style={styles.text}>{ label }</Text>
+      </TouchableOpacity>
+    );
 }
 
 const styles = StyleSheet.create({
-    container: {
-      alignItems: 'center',
-      marginTop: 40,
-      width: 200
-    },
     text: {
       fontSize: 14,
       color: '#fff',
       fontWeight: 'bold'
     },
     button: {
-      width: '80%',
+      width: '100%',
+      marginTop: 40,
       height: 50,
-      borderRadius: 25,
+      borderRadius: 5,
+      backgroundColor: colors.obsidium,
+      padding: 10,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    buttonDisable: {
+      width: '100%',
+      marginTop: 40,
+      height: 50,
+      borderRadius: 5,
+      backgroundColor: colors.gray,
       padding: 10,
       alignItems: 'center',
       justifyContent: 'center'

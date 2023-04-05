@@ -1,2 +1,3 @@
 export * from './Home';
-export * from './Wallet';
+export * from './Billing';
+export * from './DeviceRegistration';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, Wallet } from '../components/screens';
-import { routes } from '../helpers/constants';
+import { Home, Billing } from '../components/screens';
+import { colors, routes } from '../helpers/constants';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -14,22 +14,16 @@ function BottomTabNavigator() {
       tabBarIcon: ({ color, size, focused }) => {
         let iconName;
         if (route.name === routes.HOME_TAB) {
-          iconName = focused ? 'ios-home-sharp' : 'ios-home-outline';
-        } else if (route.name === routes.SETTINGS) {
-          iconName = focused ? 'settings' : 'settings-outline';
-        } else if (route.name === routes.WALLET) {
-          iconName = focused ? 'wallet' : 'wallet-outline';
-        } else if (route.name === routes.NOTIFICATIONS) {
-          iconName = focused
-            ? 'md-notifications-sharp'
-            : 'md-notifications-outline';
+          iconName = focused ? 'home' : 'home-outline';
+        } else if (route.name === routes.BILL) {
+          iconName = focused ? 'card' : 'card-outline';
         }
 
-        return <Icon name={iconName} size={22} color={color} />
+        return <Icon name={iconName} size={22} color={colors.zetifiBlue} />
       }
     })}>
       <Tab.Screen name={ routes.HOME_TAB } component={ Home } />
-      <Tab.Screen name={ routes.WALLET } component={ Wallet } />
+      <Tab.Screen name={ routes.BILL } component={ Billing } />
     </Tab.Navigator>
   );
 }

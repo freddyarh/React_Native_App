@@ -4,19 +4,24 @@ export const routes = {
     FORGOT_PASSWORD: 'Forgot Password',
   
     HOME: 'Home',
-    HOME_TAB: 'Home Tab',
+    HOME_TAB: 'Home',
     HOME_DRAWER: 'Home Drawer',
   
-    WALLET: 'Wallet',
-    WALLET_DRAWER: 'Wallet Drawer',
-  
-    NOTIFICATIONS: 'Notifications',
-    NOTIFICATIONS_DRAWER: 'Notifications Drawer',
-  
-    SETTINGS: 'Settings',
-    ACCOUNT_SETTINGS: 'Account Settings',
-    SETTINGS_NAVIGATOR: 'Settings Navigator',
-  
-    SETTINGS_DETAIL: 'Settings Detail',
-    PROFILE: 'My Profile',
+    BILL: 'Billing',
+    BILL_DRAWER: 'Billing Drawer',
+    
+    DEVICE_REG: 'Device Registration',
+    DEVICE_REG_DRAWER: 'Device Registration Drawer',
+    
+    MANAGE_DEVICE_THROTTLE: 'Throttle',
+    MANAGE_DEVICE_THROTTLE_DRAWER: 'Throttle Drawer',
+    
+    CHANGE_SSD: 'Change SSID',
+    CHANGE_SSD_DRAWER: 'Change SSID Drawer',
+    
+    UPDATE_FIRMWARE: 'Update Firmware',
+    UPDATE_FIRMWARE_DRAWER: 'Update Firmware Drawer',
+    
+    TROUBLE_CONNECTION: 'Troubleshoot Connection',
+    TROUBLE_CONNECTION_DRAWER: 'Troubleshoot Connection Drawer',
   };
