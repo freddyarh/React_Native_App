@@ -11,7 +11,7 @@ export const DeviceRegistration = () => {
   return (
     <View style={ styles.container }>
       <View style={ styles.header }>
-        <Text style={ styles.title}>Register Device Zetifi</Text>
+        <Text style={ styles.title}>Register Device simplify</Text>
         <Text style={{ marginTop: 20, textAlign: 'center' }}>Insert the information of the product that you want to associate. </Text>
       </View>
       <Text style={{ marginTop: 20, textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>Device Serial / Number</Text>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: colors.zetifiBlue,
+    color: colors.simplifyBlue,
     fontWeight: 'bold',
   },
   header: {

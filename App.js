@@ -51,7 +51,7 @@ export default function App() {
   if( loginState.isLoading && !fontsLoaded ) {
     return(
       <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-        <ActivityIndicator size="large" color={ colors.zetifiBlue } />
+        <ActivityIndicator size="large" color={ colors.simplifyBlue } />
       </View>
     );
   }

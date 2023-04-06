@@ -18,7 +18,7 @@ export const ChangeSSID = () => {
                 <DataTable.Cell numeric>
                 <View>
                     <TextInput
-                        value={ 'Zetifi' }
+                        value={ 'simplify' }
                         onChangeText={ setDataTable }
                         placeholder={ 'SSID' }
                         style={styles.textInput}
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 30,
-        color: colors.zetifiBlue,
+        color: colors.simplifyBlue,
         fontWeight: 'bold',
     },
 })

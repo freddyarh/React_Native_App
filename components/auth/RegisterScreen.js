@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: colors.zetifiBlue,
+    color: colors.simplifyBlue,
     fontWeight: 'bold',
   },
   gotAnAccount: {
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
       marginTop: 14,
   },
   loginBack: {
-      color: colors.zetifiBlue,
+      color: colors.simplifyBlue,
       fontSize: 15,
       marginTop: 14,
   },

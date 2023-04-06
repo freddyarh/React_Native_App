@@ -23,7 +23,7 @@ export class Billing extends Component {
             </View>
             <View style={ styles.card_child_3 }>
               <Text>Services: </Text>
-              <Text>Zetifi cell</Text>
+              <Text>simplify cell</Text>
             </View>
           </View>
           <View style={ [styles.card_2, styles.elevation]}>
@@ -37,7 +37,7 @@ export class Billing extends Component {
             <View style={styles.row2}>
               <Icon 
               name="information" 
-              color={ colors.zetifiBlue }
+              color={ colors.simplifyBlue }
               size={18}
               />
               <View style={styles.section}>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 30,
-    color: colors.zetifiBlue,
+    color: colors.simplifyBlue,
     fontWeight: 'bold',
   },
   card: {

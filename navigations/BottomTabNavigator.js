@@ -19,7 +19,7 @@ function BottomTabNavigator() {
           iconName = focused ? 'card' : 'card-outline';
         }
 
-        return <Icon name={iconName} size={22} color={colors.zetifiBlue} />
+        return <Icon name={iconName} size={22} color={colors.simplifyBlue} />
       }
     })}>
       <Tab.Screen name={ routes.HOME_TAB } component={ Home } />

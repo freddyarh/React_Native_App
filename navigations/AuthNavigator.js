@@ -11,21 +11,21 @@ function AuthNavigator() {
   return (
     <Stack.Navigator headerMode='Login'>
         <Stack.Screen name={ routes.LOGIN } component={ LoginScreen } options={({ route }) => ({
-            headerTintColor: colors.zetifiBlue,
+            headerTintColor: colors.simplifyBlue,
             headerShown: false,
             headerStyle: {
                 backgroundColor: colors.white
             }
         })}/>
         <Stack.Screen name="Register" component={ RegisterScreen } options={({ route }) => ({
-            headerTintColor: colors.zetifiBlue,
+            headerTintColor: colors.simplifyBlue,
             headerStyle: {
                 backgroundColor: colors.white
             },
             title: 'Back'
         })}/>
         <Stack.Screen name="Forgot Password" component={ ForgotPasswordScreen } options={({ route }) => ({
-            headerTintColor: colors.zetifiBlue,
+            headerTintColor: colors.simplifyBlue,
             headerBackTitleVisible: false,
             headerStyle: {
                 backgroundColor: colors.white

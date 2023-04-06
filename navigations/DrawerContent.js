@@ -59,7 +59,7 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                                 <Icon 
                                 name="home" 
-                                color={ colors.zetifiBlue }
+                                color={ colors.simplifyBlue }
                                 size={size}
                                 />
                             )}
@@ -72,7 +72,7 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                                 <Icon 
                                 name="git-network" 
-                                color={ colors.zetifiBlue }
+                                color={ colors.simplifyBlue }
                                 size={size}
                                 />
                             )}
@@ -84,35 +84,35 @@ export function DrawerContent(props) {
                             <List.Accordion 
                                 title="Manage Devices" 
                                 titleStyle={ styles.listItem }
-                                left={props => <List.Icon {...props} icon="cog" color={ colors.zetifiBlue } style={{marginRight:24}} />}
+                                left={props => <List.Icon {...props} icon="cog" color={ colors.simplifyBlue } style={{marginRight:24}} />}
                                 style={{backgroundColor: 'white', marginLeft:10, fontSize:40}} 
                                 id="1"
                             >
                                 <List.Item 
                                     title="Throttle Device" 
                                     titleStyle={ styles.listItem }
-                                    left={props => <List.Icon {...props} icon="speedometer" color={ colors.zetifiBlue } />}
+                                    left={props => <List.Icon {...props} icon="speedometer" color={ colors.simplifyBlue } />}
                                     onPress={() => {props.navigation.navigate('Throttle')}} 
                                     style={{marginLeft:17}}
                                 />
                                 <List.Item 
                                     title="Troubleshoot Connection"
                                     titleStyle={ styles.listItem } 
-                                    left={props => <List.Icon {...props} icon="tools" color={ colors.zetifiBlue } />}
+                                    left={props => <List.Icon {...props} icon="tools" color={ colors.simplifyBlue } />}
                                     onPress={() => {props.navigation.navigate('Troubleshoot Connection')}} 
                                     style={{marginLeft:17}}
                                 />
                                 <List.Item 
                                     title="Change SSID"
                                     titleStyle={ styles.listItem } 
-                                    left={props => <List.Icon {...props} icon="wifi" color={ colors.zetifiBlue } />}
+                                    left={props => <List.Icon {...props} icon="wifi" color={ colors.simplifyBlue } />}
                                     onPress={() => {props.navigation.navigate('Change SSID')}}
                                     style={{marginLeft:17}}
                                 />
                                 <List.Item 
                                     title="Update Firmware"
                                     titleStyle={ styles.listItem } 
-                                    left={props => <List.Icon {...props} icon="download" color={ colors.zetifiBlue } />}
+                                    left={props => <List.Icon {...props} icon="download" color={ colors.simplifyBlue } />}
                                     onPress={() => {props.navigation.navigate('Update Firmware')}} 
                                     style={{marginLeft:17}}
                                 />
@@ -122,7 +122,7 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                                 <Icon 
                                 name="card" 
-                                color={ colors.zetifiBlue }
+                                color={ colors.simplifyBlue }
                                 size={size}
                                 />
                             )}
@@ -138,7 +138,7 @@ export function DrawerContent(props) {
                     icon={({color, size}) => (
                         <Icon 
                         name="log-out" 
-                        color={ colors.zetifiBlue }
+                        color={ colors.simplifyBlue }
                         size={size}
                         />
                     )}

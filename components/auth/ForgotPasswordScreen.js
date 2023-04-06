@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     },
     title: {
       fontSize: 30,
-      color: colors.zetifiBlue,
+      color: colors.simplifyBlue,
       fontWeight: 'bold',
     },
     titleCode: {
