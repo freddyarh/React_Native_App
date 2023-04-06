@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   register: {
-    color: colors.simplifyBlue,
+    color: colors.zetifiBlue,
     fontSize: 15,
     marginTop: 14,
   }

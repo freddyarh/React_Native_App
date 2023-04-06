@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontFamily: 'FieldGeoRegular',
-    color: colors.simplifyBlue,
+    color: colors.zetifiBlue,
     fontWeight: 'bold',
     margin:'5%',
     textAlign: 'center',
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Arial-Ln',
     margin: 18,
-    color: colors.simplifyBlue
+    color: colors.zetifiBlue
   },
   image: {
     alignContent: 'center',

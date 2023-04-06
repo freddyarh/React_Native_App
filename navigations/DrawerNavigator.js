@@ -18,7 +18,7 @@ function DrawerNavigator() {
           title: 'Home',
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue,
+              backgroundColor: colors.zetifiBlue,
           },
         }}
         />
@@ -29,7 +29,7 @@ function DrawerNavigator() {
           title: 'Device Registration',
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue,
+              backgroundColor: colors.zetifiBlue,
           },
         }}
         />
@@ -40,7 +40,7 @@ function DrawerNavigator() {
           title: 'Manage Device Throttle',
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue
+              backgroundColor: colors.zetifiBlue
           },
         }}
         />
@@ -51,7 +51,7 @@ function DrawerNavigator() {
           title: routes.CHANGE_SSD,
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue
+              backgroundColor: colors.zetifiBlue
           },
         }}
         />
@@ -62,7 +62,7 @@ function DrawerNavigator() {
           title: routes.UPDATE_FIRMWARE,
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue
+              backgroundColor: colors.zetifiBlue
           },
         }}
         />
@@ -73,7 +73,7 @@ function DrawerNavigator() {
           title: routes.TROUBLE_CONNECTION,
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue
+              backgroundColor: colors.zetifiBlue
           },
         }}
         />
@@ -84,7 +84,7 @@ function DrawerNavigator() {
           title: routes.BILL,
           headerTintColor: colors.white,
           headerStyle: {
-              backgroundColor: colors.simplifyBlue
+              backgroundColor: colors.zetifiBlue
           },
         }}
         />

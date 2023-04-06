@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 30,
-        color: colors.simplifyBlue,
+        color: colors.zetifiBlue,
         fontWeight: 'bold',
     },
 })
