@@ -55,7 +55,7 @@ export function Home () {
             <TouchableOpacity style={[ styles.box, styles.elevation, {backgroundColor: colors.white}]} onPress={ () => { alert('box 3') } }>
               <Image
                 // style={[styles.logo}
-                source={require('../../assets/images/logo.jpg')}
+                source={require('../../assets/images/logo.jpeg')}
                 resizeMode="contain"
               /> 
             </TouchableOpacity>

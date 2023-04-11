@@ -53,7 +53,7 @@ const { height } = useWindowDimensions();
         <View style={styles.containerImg}>
           <Image
             style={[styles.logo, { height: height * 0.3 }]}
-            source={require('../../assets/images/logo.jpg')}
+            source={require('../../assets/images/logo.jpeg')}
             resizeMode="contain"
           /> 
         </View>
