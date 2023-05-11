@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { StyleSheet, Text, View, Image, useWindowDimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { TextInput } from 'react-native-paper';
 
 import { colors, routes } from '../../helpers/constants';
 import ButtonGradient from '../ButtonGradient';
@@ -14,8 +13,8 @@ const Stack = createNativeStackNavigator();
 
 export default function LoginScreen({ navigation }) {
 
-  const [email, setEmail] = useState("user@gmail.com");
-  const [password, setPassword] = useState("pass");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [checkValidEmail, setCheckValidEmail] = useState(false);
   const [loginBottonDisabled, setLoginBottonDisabled] = useState(true);
   const [eyeButton, setEyeButton] = useState(true);
@@ -58,12 +57,6 @@ const { height } = useWindowDimensions();
           /> 
         </View>
         <Text style={styles.subTitle}>Sign in to your account</Text>
-        {/* <TextInput
-          style={{ width: '100%'}}
-          label="Password"
-          secureTextEntry={eyeButton}
-          right={<TextInput.Icon icon="eye" onPress={ iconEye }/>}
-        /> */}
         <CustomInput 
           label={ "Email" }
           value={ email }

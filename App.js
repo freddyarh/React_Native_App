@@ -28,7 +28,7 @@ export default function App() {
     signIn: ( userName, password ) => {
       let userToken;
       userToken = null;
-      if( userName === 'user@gmail.com' && password === 'pass'){
+      if( userName === '' && password === ''){
         userToken = 'asdsad';
       }
       dispatch({ type: 'LOGIN', id: userName, token: userToken });
