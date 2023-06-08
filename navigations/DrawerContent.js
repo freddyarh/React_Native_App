@@ -30,7 +30,7 @@ export function DrawerContent(props) {
                         <View style={{flexDirection:'column',marginTop: 15}}>
                         <Image
                             style={styles.logo}
-                            source={require('../assets/images/logo.jpg')}
+                            source={require('../assets/images/logo.jpeg')}
                             resizeMode="contain"
                         /> 
                         </View>

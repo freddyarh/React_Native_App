@@ -52,13 +52,13 @@ export function Home () {
                 />
                 <Text style={{ fontWeight: 'bold', color: colors.dark }}>Locate your device</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[ styles.box, styles.elevation, {backgroundColor: colors.white}]} onPress={ () => { alert('box 3') } }>
+            {/* <TouchableOpacity style={[ styles.box, styles.elevation, {backgroundColor: colors.white}]} onPress={ () => { alert('box 3') } }>
               <Image
                 // style={[styles.logo}
-                source={require('../../assets/images/logo.jpg')}
+                source={require('../../assets/images/logo.jpeg')}
                 resizeMode="contain"
               /> 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <TouchableOpacity style={[ styles.box, styles.elevation, {backgroundColor: colors.white}]} onPress={ () => { alert('box 4') } }>
               <Icon 
                   name="wifi" 

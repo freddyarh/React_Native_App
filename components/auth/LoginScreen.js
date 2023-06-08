@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { StyleSheet, Text, View, Image, useWindowDimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import { TextInput } from 'react-native-paper';
 
 import { colors, routes } from '../../helpers/constants';
 import ButtonGradient from '../ButtonGradient';
@@ -14,8 +13,8 @@ const Stack = createNativeStackNavigator();
 
 export default function LoginScreen({ navigation }) {
 
-  const [email, setEmail] = useState("user@gmail.com");
-  const [password, setPassword] = useState("pass");
+  const [email, setEmail] = useState("luis@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [checkValidEmail, setCheckValidEmail] = useState(false);
   const [loginBottonDisabled, setLoginBottonDisabled] = useState(true);
   const [eyeButton, setEyeButton] = useState(true);
@@ -53,7 +52,7 @@ const { height } = useWindowDimensions();
         <View style={styles.containerImg}>
           <Image
             style={[styles.logo, { height: height * 0.3 }]}
-            source={require('../../assets/images/logo.jpg')}
+            source={require('../../assets/images/logo.jpeg')}
             resizeMode="contain"
           /> 
         </View>
@@ -84,7 +83,7 @@ const { height } = useWindowDimensions();
           rightEyeButton={ iconEye }
         />
         <Text style={styles.forgotPassword} onPress={() => navigation.navigate("Forgot Password")}>Forgot your password?</Text>
-        <ButtonGradient label={"Sign In"} buttonEvent={ () => { handleLogin( email, password ) }} disabled={ loginBottonDisabled } />
+        <ButtonGradient label={"Sign In"} buttonEvent={ () => { handleLogin( email, password ) }} disabled={ false } />
         <Text style={styles.createAccount}>Don't have an account? <Text style={styles.register} onPress={() => navigation.navigate( routes.REGISTER)}>Sign up</Text></Text>
         <StatusBar style="auto" />
       </View>
