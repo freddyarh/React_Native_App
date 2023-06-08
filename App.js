@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useReducer } from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import app from './firebase/firebaseConfig';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-// import { useAuthentication } from './helpers/hooks/useAuthentication';
 import { NavigationContainer } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 
@@ -72,7 +71,6 @@ export default function App() {
     <AuthContext.Provider value={ authContext }> 
       <NavigationContainer>
         { loginState.userToken === null ? (
-        // { user ? (
           <AuthNavigator />
           ):(
           <DrawerNavigator />
