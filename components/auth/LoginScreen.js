@@ -13,8 +13,8 @@ const Stack = createNativeStackNavigator();
 
 export default function LoginScreen({ navigation }) {
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("luis@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [checkValidEmail, setCheckValidEmail] = useState(false);
   const [loginBottonDisabled, setLoginBottonDisabled] = useState(true);
   const [eyeButton, setEyeButton] = useState(true);
@@ -77,7 +77,7 @@ const { height } = useWindowDimensions();
           rightEyeButton={ iconEye }
         />
         <Text style={styles.forgotPassword} onPress={() => navigation.navigate("Forgot Password")}>Forgot your password?</Text>
-        <ButtonGradient label={"Sign In"} buttonEvent={ () => { handleLogin( email, password ) }} disabled={ loginBottonDisabled } />
+        <ButtonGradient label={"Sign In"} buttonEvent={ () => { handleLogin( email, password ) }} disabled={ false } />
         <Text style={styles.createAccount}>Don't have an account? <Text style={styles.register} onPress={() => navigation.navigate( routes.REGISTER)}>Sign up</Text></Text>
         <StatusBar style="auto" />
       </View>

@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useReducer } from 'react';
 import { View, ActivityIndicator } from 'react-native';
+import app from './firebase/firebaseConfig';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { NavigationContainer } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 
@@ -22,18 +24,26 @@ export default function App() {
     userToken: null,
   };
 
+  const auth = getAuth();
+
   const [loginState, dispatch] = useReducer(loginReducer, initialLoginState);
 
   const authContext = useMemo(() => ({
-    signIn: ( userName, password ) => {
+    signIn: async( userName, password ) => {
       let userToken;
       userToken = null;
-      if( userName === '' && password === ''){
-        userToken = 'asdsad';
-      }
-      dispatch({ type: 'LOGIN', id: userName, token: userToken });
+      await signInWithEmailAndPassword(auth, userName, password)
+      .then(({user}) => {
+          userToken = user.stsTokenManager.accessToken;
+          dispatch({ type: 'LOGIN', id: user.displayName, token: userToken });
+      })
+      .catch(err => {
+          console.log(err.message);
+          if (err.message === "Firebase: Error (auth/wrong-password).") return alert("User or password incorrect");
+      })
     },
-    signOut: () => {
+    signOut: async() => {
+      await auth.signOut();
       dispatch({ type:'LOGOUT' });
     },
     signUp: () => {
@@ -44,7 +54,8 @@ export default function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: 'RETRIEVE_TOKEN', token: 'null' });
+      app;
+      dispatch({ type: 'RETRIEVE_TOKEN', token: null });
     }, 1000);
   }, []);
 

@@ -1,4 +1,6 @@
 node_modules/
+firebase
+.env
 .expo/
 dist/
 npm-debug.*
